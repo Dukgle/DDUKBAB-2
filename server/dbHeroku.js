@@ -9,7 +9,7 @@
 
 // const db = mysql.createConnection(dbHeroku);
 
-// module.exports = db;
+// module.exports = db; 
 
 const mysql = require("mysql2");
 
