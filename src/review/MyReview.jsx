@@ -29,10 +29,10 @@ function MyReview() {
                 {reviews.map((review) => (
                     <div className="my-review-item" key={review.id} onClick={() => handleReviewClick(review.id)}>
                         <p>{review.content}</p>
-                        <p>{review.time}</p>
+                        <p className="my-time">{review.time}</p>
                         <div className="my-star-rating">
-                            <img src={star} alt="Star" />
                             <span>{review.starRating}</span>
+                            <img src={star} alt="Star" />
                         </div>
                     </div>
                 ))}

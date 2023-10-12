@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import "./ResModal24.css"; // CSS 파일을 임포트
 
 Modal.setAppElement('#root');
 
@@ -32,6 +33,7 @@ function TwoFourSeatModal({ isOpen, closeModal, seatCount, tableInfo }) {
                         type="text"
                         value={studentIds[i]}
                         onChange={(e) => handleStudentIdChange(e, i)}
+                        className="stdnum" // stdnum 클래스 추가
                     />
                 </div>
             );
@@ -40,12 +42,14 @@ function TwoFourSeatModal({ isOpen, closeModal, seatCount, tableInfo }) {
     };
 
     return (
-        <Modal isOpen={isOpen} onRequestClose={closeModal}>
-            <h1>{tableInfo}</h1> {/* 수정: 테이블 라벨과 의자 라벨 표시 */}
-            <h2>테이블을 예약하시겠습니까?</h2>
-            {renderInputFields()}
-            <button onClick={handleReserveClick}>예약</button>
-            <button onClick={closeModal}>닫기</button>
+        <Modal isOpen={isOpen} onRequestClose={closeModal} className="ResModal">
+            <div className='ModalContent'>
+                <h1>{tableInfo}</h1>
+                <h2>테이블을 예약하시겠습니까?</h2>
+                {renderInputFields()}
+                <button onClick={handleReserveClick} className="res">예약</button>
+                <button onClick={closeModal} className="notres">닫기</button>
+            </div>
         </Modal>
     );
 }
