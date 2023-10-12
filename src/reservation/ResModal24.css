@@ -1,3 +1,4 @@
+/* ResModal.css */
 .ResModal {
     position: fixed;
     top: 0;
@@ -22,7 +23,7 @@
   }
   
   h1 {
-    font-size: 24px;
+    font-size: 30px;
     margin: 0 0 10px;
   }
   
@@ -37,7 +38,6 @@
   }
   
   .stdnum {
-    display: block;
     width: 90%;
     max-width: 300px; /* 최대 너비를 300px로 제한 */
     margin: 0 auto;
@@ -46,6 +46,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    display: block; /* 블록 요소로 설정 */
+    box-sizing: border-box; /* 너비가 가득 차도록 설정 */
+    width: 100%;
   }
   
   .res {
@@ -57,3 +60,4 @@
     font-size: 16px;
     background-color: #FCCB6F;
   }
+  
